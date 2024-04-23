@@ -44,30 +44,20 @@ require './v/header.php';
                     <th>name</th>
                     <th>brand</th>
                     <th>price</th>
-                    <th>quantity</th>
+                    <th>stock</th>
                 </tr>
             </thead>
-                <tr>
-                    <td>A</td>
-                    <td>A</td>
-                    <td>A</td>
-                    <td>A</td>
-                    <td>A</td>
-                </tr>   
-                <tr>
-                    <td>B</td>
-                    <td>B</td>
-                    <td>B</td>
-                    <td>B</td>
-                    <td>B</td>
-                </tr>  
-             <tfoot>
+               <?php
+                      require './m/Item.php';
+                      $results=Item::echoItems();                     
+               ?>
+            <tfoot>
                 <tr>
                     <th>code</th>
                     <th>name</th>
                     <th>brand</th>
                     <th>price</th>
-                    <th>quantity</th>
+                    <th>stock</th>
                 </tr>
             </tfoot>
         </table>
@@ -75,5 +65,10 @@ require './v/header.php';
     </div>
 </div> 
 
+
+
+<script>
+
+</script>
 <?php
 require './v/footer.php';

@@ -2,8 +2,19 @@
    <script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-2.0.5/datatables.min.js"></script>
    
    <script>    	
-        new DataTable('#items');
-        
+
+//        $('#items').DataTable( {
+//        processing: true,
+//        serverSide: true,
+//        serverMethod: 'post',
+//        ajax: {
+//        url: './c/c.php?action=getitems'
+//        },
+//        columns:[{data:'code'},{data:'name'},{data:'brand'},{data:'price'},{data:'stock'}]
+//        
+//        } );
+     
+        new DataTable('#items'); 
         var elts = document.getElementsByClassName('formin');
         Array.from(elts).forEach(function(elt){
         elt.addEventListener("keyup", function(event) {
